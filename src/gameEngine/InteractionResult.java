@@ -8,5 +8,10 @@ package gameEngine;
  * 
  */
 public enum InteractionResult {
-	HIT, KILL, ADVANCE, GET_POINT, NONE;
+	HIT("Hit", 0), KILL("Kill", 1), ADVANCE("Advance", 2), GET_POINT("Get_point", 3), NONE("None", 4);
+
+	
+	private InteractionResult (final String name, final int numValue) {
+		
+	}
 }

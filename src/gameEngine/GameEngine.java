@@ -29,7 +29,7 @@ public class GameEngine {
 	 */
 	public final static int NUM_LEVELS = 2;
 	// Keep track of the current level, starting with level 1
-	private int currentLevel;
+	private int currentLevel = 0;
 	// LevelEngine will create all the data structures for this level
 	private LevelSetup levelData;
 	// Each level has a 1D array for the board containing pieces that can be drawn
