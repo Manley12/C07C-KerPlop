@@ -200,7 +200,6 @@ public class Player implements Drawable {
 		location = newLocation;
 		return true;
 	}
-
 	/**
 	 * Getter for player location
 	 * 

@@ -4,7 +4,7 @@ import gameEngine.Drawable;
 import gameEngine.InteractionResult;
 
 public class Statue extends GamePiece{
-	private char symbol;
+	private char symbol; 
 	private String name;
 	private int location;
 	public Statue(char symbol, String name, int location) {

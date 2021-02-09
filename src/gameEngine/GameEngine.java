@@ -129,13 +129,13 @@ public class GameEngine {
 	 */
 	public void setupLevel(int levelNum) {
 		// LevelEngine needs to create the specified level
-		levelData.createLevel(levelNum);
+		levelData.createLevel(levelNum, BOARD_SIZE);
 
 		// get the data for the level
 		gameBoard = levelData.getBoard();
 		movingPieces = levelData.getMovingPieces();
 		interactingPieces = levelData.getInteractingPieces();
-
+ 
 		// reset player statistics, starting location determined
 		// by level engine
 		player.resetLevel(levelData.getPlayerStartLoc());

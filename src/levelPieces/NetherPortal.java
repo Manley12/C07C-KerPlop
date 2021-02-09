@@ -21,4 +21,5 @@ public class NetherPortal extends GamePiece{
 		return null;
 	}
 
-}
+} 
+  
