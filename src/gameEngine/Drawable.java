@@ -1,3 +1,7 @@
+// Author: Justin Orji
+// Author: Gregory Manley
+//
+// Drawable
 package gameEngine;
 
 /**

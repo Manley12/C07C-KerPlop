@@ -1,3 +1,7 @@
+// Author: Justin Orji
+// Author: Gregory Manley
+//
+// Moveable
 package gameEngine;
 
 /**

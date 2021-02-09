@@ -1,3 +1,8 @@
+// Author: Justin Orji
+// Author: Gregory Manley
+//
+// LevelSetup
+
 package levelPieces;
 
 import java.util.*;
@@ -5,17 +10,17 @@ import gameEngine.Drawable;
 import gameEngine.Moveable;
 
 public class LevelSetup implements Moveable {
+	// get the gameBoard of type drawable to return to be printed to the console
 	public Drawable[] getBoard() {
 
 		return gameBoard;
 	}
 
+	// create the level
 	public void createLevel(int levelNum, int boardSize) {
-		//System.out.println(levelNum);
+		// test to see which level to setup
 		if (levelNum == 1) {
-			// erase arraylist 
-			//create gameboard from template
-			//gameBoard = new Drawable[boardSize];
+			// erase whereIsPieces and create random value array
 			int[] randArray = {0, 0, 0};
 			whereIsPieces = new int[3];
 			
@@ -25,12 +30,13 @@ public class LevelSetup implements Moveable {
 				randArray[j] = randomNum;
 			}
 			
+			// Setup the pieces
 			Boxer boxerOne = new Boxer('B', "Boxer", randArray[0]);
 			Ambrosia ambrosia = new Ambrosia('A', "Ambrosia", randArray[1]); 
 			NetherPortal netherPortal = new NetherPortal('N', "Nether Portal", randArray[2]);
 			
+			// Place the pieces on the gameBoard based upon the random values generated
 			for (int i = 0; i < boardSize; i++) {
-				//System.out.println(randArray[0] + randArray[1]);
 				if (i == randArray[0]) {
 					gameBoard[i] = boxerOne;
 					piecesOnBoard.add(boxerOne);
@@ -48,7 +54,9 @@ public class LevelSetup implements Moveable {
 				}
 			}
 		} else if (levelNum == 2) {
+			// erase whereIsPieces and gameBoard and create random value array
 			gameBoard = new Drawable[boardSize];
+			whereIsPieces = new int[4];
 			int[] randArray = {0, 0, 0, 0, 0};
 			
 			for (int j = 0; j < 5; j++) {
@@ -57,13 +65,13 @@ public class LevelSetup implements Moveable {
 				randArray[j] = randomNum;
 			}
 			
+			// Setup the pieces
 			Shinobi shinobiOne = new Shinobi('S', "Shinobi", randArray[0]);
 			Statue statueOne = new Statue('S', "Statue", randArray[1]);
 			Ambrosia ambrosiaTwo = new Ambrosia('A', "Ambrosia", randArray[2]);
 			Joker jokerOne = new Joker();
 			
-			piecesOnBoard.add(shinobiOne);
-			
+			// Place the pieces on the gameBoard based upon the random values generated
 			for (int i = 0; i < gameBoard.length; i++) {
 				if (i == randArray[0]) {
 					gameBoard[i] = shinobiOne;
@@ -90,8 +98,10 @@ public class LevelSetup implements Moveable {
 	}
 
 	public ArrayList<Moveable> getMovingPieces(){
+		// Create arraylist variable to return
 		ArrayList<Moveable> list = new ArrayList<>();
 		
+		// Determine if the piecesOnBoard value at i is of type Moveable and if so add to list
 		for (int i = 0; i < piecesOnBoard.size(); i++) {
 			if (piecesOnBoard.get(i) instanceof Moveable) {
 				list.add((Moveable) piecesOnBoard.get(i));
@@ -102,8 +112,10 @@ public class LevelSetup implements Moveable {
 	}
 
 	public ArrayList<GamePiece> getInteractingPieces() {
+		// Create arraylist variable to return
 		ArrayList<GamePiece> list = new ArrayList<>();
 		
+		// Determine if the piecesOnBoard value at i is of type GamePiece and if so add to list
 		for (int i = 0; i < piecesOnBoard.size(); i++) {
 			if (piecesOnBoard.get(i) instanceof GamePiece) {
 				list.add(piecesOnBoard.get(i));
@@ -113,36 +125,21 @@ public class LevelSetup implements Moveable {
 		return list;
 	}
 
+	// Determine a random value at which to start player
 	public int getPlayerStartLoc() {
 		int randPlace = random.nextInt(20);
-		int i = 0;
-		int j = 0;
-		boolean unique = false;
-		
-		/* Accidentally creating infinite loop here
-		 * do {
-			for (i = 0; i < whereIsPieces.length; i++) {
-				if (randPlace != whereIsPieces[i] ) {
-					j++;
-				}
-			}
-			if (j == whereIsPieces.length) {
-				unique = false;
-				
-			} else {
-				randPlace = random.nextInt(20);
-			}
-		} while (unique != true);*/
 		
 		return randPlace;
 	}
 	
+	// Setup variable for file
 	private Random random = new Random();
 	private ArrayList<GamePiece> piecesOnBoard = new ArrayList<>();
 	private int[] whereIsPieces;
 	private Drawable[] gameBoard = {null, null, null, null, null, null, null, null, null, null, null, null,null, null, null, null, null, null, null, null};
 	
 
+	// Test override, no use
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
 		System.out.println("test");

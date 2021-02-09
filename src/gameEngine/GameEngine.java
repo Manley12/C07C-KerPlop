@@ -1,3 +1,7 @@
+// Author: Justin Orji
+// Author: Gregory Manley
+//
+// GameEngine
 package gameEngine;
 
 import java.util.ArrayList;

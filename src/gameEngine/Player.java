@@ -1,3 +1,7 @@
+// Author: Justin Orji
+// Author: Gregory Manley
+//
+// Player
 package gameEngine;
 
 import java.util.Scanner;
