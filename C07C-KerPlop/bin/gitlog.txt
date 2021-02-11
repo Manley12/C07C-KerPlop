@@ -1,0 +1,35 @@
+commit 59c2b5b1d2423c26e3f7048f0977b9ac9b15e6fd
+Author: CatMusty <57682141+CatMusty@users.noreply.github.com>
+Date:   Mon Feb 8 20:46:28 2021 -0600
+    
+    Finishing touches, working game pieces -Gregory
+
+commit 03889730137b976aba98b4c39c4fc7d72bea6953
+Author: Gregory Manley <gregory.f.manley@gmail.com>
+Date:   Mon Feb 8 17:55:37 2021 -0700
+
+    Interation, Moveable Arraylist - Justin
+
+commit d4326ee1a4861bb2496a55190ad49af1fa84b479
+Author: CatMusty <57682141+CatMusty@users.noreply.github.com>
+Date:   Sat Feb 6 20:58:53 2021 -0600
+    
+    Created Game board, added some pieces. -Gregory
+
+commit 9d66e227b39fbd5b0540a793962c8c1dc33864bb
+Author: Gregory Manley <gregory.f.manley@gmail.com>
+Date:   Sat Feb 6 19:12:18 2021 -0700
+
+    No more array error - Justin
+
+commit 29d1c0936bf6108e3b1ff77481f458ab64d68bdd
+Author: CatMusty <57682141+CatMusty@users.noreply.github.com>
+Date:   Thu Feb 4 11:24:21 2021 -0600
+
+    Initial
+
+commit b4262a850471d857d788f0b4a743ac33866e1d38
+Author: Gregory Manley <gregory.f.manley@gmail.com>
+Date:   Thu Feb 4 10:12:24 2021 -0700
+
+    starting commit
